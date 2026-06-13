@@ -1,8 +1,6 @@
 # Phantom Keeper
 
-_A cozy tomogachi-like virtual ghost-raising mobile game built with React Native + Expo._
-
-Phantom Keeper is a mobile game where you can care for, perform rituals with, and torment a pet phantom.
+A cozy tamagotchi-like virtual mobile game with a spooky twist, built with React Native + Expo where you can care for, perform rituals with, and torment a pet phantom.
 
 ## Features
 
@@ -43,3 +41,7 @@ Perform supernatural actions to interact with your Phantom:
    <img src="./assets/screenshots/banish.PNG" width="150" />
    <img src="./assets/screenshots/tease.PNG" width="150" />
 </p>
+
+### Settings (WIP)
+
+![Settings Screen](./assets/screenshots/settingsScreenshot.PNG)
