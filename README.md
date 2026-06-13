@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+# Phantom Keeper
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+_A cozy tomogachi-like virtual ghost-raising mobile game built with React Native + Expo._
 
-## Get started
+Phantom Keeper is a mobile game where you can care for, perform rituals with, and torment a pet phantom.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+### Ghost Companion
 
-2. Start the app
+- An animated phantom with multiple mood states:
+  - Playful
+  - Serene
+  - Restless
+  - Faint
+  - Spiteful
+  - Chaotic
+- Mood changes based on player actions and stat decay.
 
-   ```bash
-   npx expo start
-   ```
+![Home Screen](<./assets/screenshots/homeScreenshot(chaotic).PNG>)
 
-In the output, you'll find options to open the app in a
+### Stats System
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+The phantom has 4 core stats:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| Stat          | Description                                              |
+| ------------- | -------------------------------------------------------- |
+| Manifestation | How physically present the phantom is.                   |
+| Mischief      | Determines how chaotic the phantom behaves.              |
+| Essence       | The phantom's life force. Influences evolution and mood. |
+| Mood          | The phantom's emotional state, dependant on other stats. |
 
-## Get a fresh project
+Stats decay over time and are influenced by Rituals. <br/>
+Gameplay logic can be found in `src/redux/phantomSlice.js`
 
-When you're ready, run:
+### Rituals
 
-```bash
-npm run reset-project
-```
+Perform supernatural actions to interact with your Phantom:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<p float="left">
+   <img src="./assets/screenshots/channel.PNG" width="150" />
+   <img src="./assets/screenshots/commune.PNG" width="150" />
+   <img src="./assets/screenshots/banish.PNG" width="150" />
+   <img src="./assets/screenshots/tease.PNG" width="150" />
+</p>
