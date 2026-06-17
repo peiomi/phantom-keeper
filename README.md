@@ -15,7 +15,7 @@ A cozy tamagotchi-like virtual mobile game with a spooky twist, built with React
   - Chaotic
 - Mood changes based on player actions and stat decay.
 
-![Home Screen](<./assets/screenshots/homeScreenshot(chaotic).PNG>)
+![Home Screen](./assets/screenshots/homeScreenshot.PNG)
 
 ### Stats System
 
@@ -42,6 +42,6 @@ Perform supernatural actions to interact with your Phantom:
    <img src="./assets/screenshots/tease.PNG" width="150" />
 </p>
 
-### Settings (WIP)
+### Settings
 
 ![Settings Screen](./assets/screenshots/settingsScreenshot.PNG)

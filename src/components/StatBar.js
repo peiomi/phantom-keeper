@@ -6,10 +6,10 @@ const StatBar = ({ label, value, color, style }) => {
       <Text style={[style, { marginBottom: 2 }]}>
         {label}: {Math.round(value)}
       </Text>
+
       <View
         style={{
           height: 10,
-          backgroundColor: "#eee",
           borderRadius: 5,
           borderWidth: 2,
           borderColor: "rgba(255, 183, 213, 0.6)",

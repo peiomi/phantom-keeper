@@ -3,18 +3,19 @@ import * as Animatable from "react-native-animatable";
 import { useSelector } from "react-redux";
 import { moodImages } from "../constants/moodImages";
 
-const PhantomView = () => {
+const PhantomView = ({ idle }) => {
   const p = useSelector((s) => s.phantom);
+  const opacity = Math.max(0.1, Math.min(1, p.manifestation / 100));
 
   return (
     <View style={styles.container}>
       <View style={styles.ghostWrapper}>
         <Animatable.Image
           source={moodImages[p.mood] || moodImages.default}
-          animation="pulse"
-          iterationCount="infinite"
-          duration={2000}
-          style={styles.ghost}
+          animation={idle ? "pulse" : undefined}
+          iterationCount={idle ? "infinite" : 1}
+          duration={idle ? 2000 : 0}
+          style={[styles.ghost, { opacity }]}
           resizeMode="contain"
         />
       </View>

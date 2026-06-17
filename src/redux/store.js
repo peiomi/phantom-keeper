@@ -11,6 +11,8 @@ import {
   REHYDRATE,
 } from "redux-persist";
 import phantomReducer from "./phantomSlice";
+import settingsReducer from "./settingsSlice";
+import tutorialReducer from "./tutorialSlice";
 
 const persistConfig = {
   key: "phantom",
@@ -20,7 +22,11 @@ const persistConfig = {
 const persisted = persistReducer(persistConfig, phantomReducer);
 
 export const store = configureStore({
-  reducer: { phantom: persisted },
+  reducer: {
+    phantom: persisted,
+    settings: settingsReducer,
+    tutorial: tutorialReducer,
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

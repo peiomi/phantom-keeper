@@ -18,7 +18,7 @@ export const TEXT = {
     fontFamily: FONTS.title,
     fontSize: 26,
     color: "#FF4FA3",
-    textShadowColor: "#FF77D9",
+    textShadowColor: "#fae7f4",
     textShadowRadius: 6,
   },
   body: {

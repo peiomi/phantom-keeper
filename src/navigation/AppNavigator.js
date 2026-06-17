@@ -1,5 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
+import { useDispatch } from "react-redux";
+import { setCurrentScreen } from "../redux/tutorialSlice";
 import HomeScreen from "../screens/HomeScreen";
 import RitualsScreen from "../screens/RitualsScreen";
 import SettingsScreen from "../screens/SettingsScreen";
@@ -7,8 +9,16 @@ import SettingsScreen from "../screens/SettingsScreen";
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
+  const dispatch = useDispatch();
+
   return (
     <Tab.Navigator
+      screenListeners={{
+        state: (e) => {
+          const route = e.data.state.routes[e.data.state.index];
+          dispatch(setCurrentScreen(route.name));
+        },
+      }}
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#ff4fa3",

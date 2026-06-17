@@ -4,13 +4,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const clamp = (v, min = 0, max = 100) => Math.min(max, Math.max(min, v));
 
 const initialState = {
-  name: "Wisp",
+  name: "",
   manifestation: 80, // visibility
   mischief: 20, // how chaotic it feels
   essence: 50, // energy
   mood: "playful",
   level: 1,
   xp: 0,
+  xpToNextLevel: 50,
   lastUpdated: Date.now(),
 };
 
@@ -95,15 +96,38 @@ const phantomSlice = createSlice({
       if (state.xp >= reqXP) {
         state.level += 1;
         state.xp -= reqXP;
+        state.xpToNextLevel = state.level * 50;
         // level up bonus
         state.manifestation = clamp(state.manifestation + 10);
         state.essence = clamp(state.essence + 5);
       }
     },
+    resetPhantom(state) {
+      return {
+        ...initialState,
+        lastUpdated: Date.now(),
+      };
+    },
+    setPhantomName(state, action) {
+      state.name = action.payload;
+    },
+    // just for testing mischief event
+    mischiefTrigger(state) {
+      state.mischief = 80;
+    },
   },
 });
 
-export const { applyDecay, channel, tease, banish, commune, levelup } =
-  phantomSlice.actions;
+export const {
+  applyDecay,
+  channel,
+  tease,
+  banish,
+  commune,
+  levelup,
+  resetPhantom,
+  mischiefTrigger,
+  setPhantomName,
+} = phantomSlice.actions;
 
 export default phantomSlice.reducer;

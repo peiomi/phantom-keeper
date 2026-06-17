@@ -1,9 +1,10 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 
-const RitualButton = ({ label, icon, onPress }) => {
+const RitualButton = ({ label, icon, onPress, onLayout }) => {
   return (
     <Pressable
       onPress={onPress}
+      onLayout={onLayout}
       style={({ pressed }) => [
         styles.ritualButton,
         pressed && { transform: [{ scale: 0.96 }] },
@@ -17,7 +18,7 @@ const RitualButton = ({ label, icon, onPress }) => {
 
 const styles = StyleSheet.create({
   ritualButton: {
-    width: "50%",
+    width: "49%",
     paddingVertical: 20,
     marginVertical: 10,
     borderRadius: 10,
