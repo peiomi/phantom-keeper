@@ -4,7 +4,7 @@
     "slug": "PhantomKeeper",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/spirit.png",
+    "icon": "./src/assets/moods/chaotic.png",
     "scheme": "phantomkeeper",
     "userInterfaceStyle": "automatic",
     "ios": {
