@@ -12,10 +12,16 @@
     },
     "android": {
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.peiomi.PhantomKeeper"
     },
     "web": {
       "output": "static"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0fd44e39-1bdf-4ac8-8e3c-9ba2ec0ec07f"
+      }
     }
   }
 }
